@@ -1,4 +1,5 @@
-﻿namespace FinitiGlossary.Domain.Entities.Auth.Requests
+﻿namespace FinitiGlossary.Application.DTOs.Request
+
 {
     public record RefreshTokenRequest(string RefreshToken);
 }

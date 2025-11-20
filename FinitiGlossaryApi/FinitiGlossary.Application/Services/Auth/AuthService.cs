@@ -1,9 +1,9 @@
 ﻿using FinitiGlossary.Application.Interfaces.Auth;
 using FinitiGlossary.Application.Interfaces.Email;
-using FinitiGlossary.Application.Interfaces.Repositories.Token;
-using FinitiGlossary.Application.Interfaces.Repositories.UserIRepo;
-using FinitiGlossary.Domain.Entities.Token;
+using FinitiGlossary.Domain.Entities.Auth.Token;
 using FinitiGlossary.Domain.Entities.Users;
+using FinitiGlossary.Domain.Interfaces.Repositories.Token;
+using FinitiGlossary.Domain.Interfaces.Repositories.UserIRepo;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

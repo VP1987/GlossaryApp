@@ -1,5 +1,5 @@
-﻿using FinitiGlossary.Application.Interfaces.Repositories.UserIRepo;
-using FinitiGlossary.Domain.Entities.Users;
+﻿using FinitiGlossary.Domain.Entities.Users;
+using FinitiGlossary.Domain.Interfaces.Repositories.UserIRepo;
 using FinitiGlossary.Infrastructure.DAL;
 using Microsoft.EntityFrameworkCore;
 

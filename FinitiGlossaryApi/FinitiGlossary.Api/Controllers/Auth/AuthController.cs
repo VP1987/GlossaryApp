@@ -1,6 +1,6 @@
-﻿using FinitiGlossary.Application.Interfaces.Auth;
-using FinitiGlossary.Domain.Entities.Auth.Requests;
-using FinitiGlossary.Domain.Entities.Auth.Responses;
+﻿using FinitiGlossary.Application.DTOs.Request;
+using FinitiGlossary.Application.DTOs.Response;
+using FinitiGlossary.Application.Interfaces.Auth;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinitiGlossary.Api.Controllers.Auth

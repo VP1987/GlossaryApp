@@ -1,6 +1,6 @@
 ﻿using FinitiGlossary.Domain.Entities.Auth.Token;
 
-namespace FinitiGlossary.Application.Interfaces.Repositories.Token
+namespace FinitiGlossary.Domain.Interfaces.Repositories.Token
 {
     public interface IRefreshTokenRepository
     {

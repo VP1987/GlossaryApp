@@ -1,5 +1,5 @@
-﻿using FinitiGlossary.Application.Interfaces.Repositories.Token;
-using FinitiGlossary.Domain.Entities.Auth.Token;
+﻿using FinitiGlossary.Domain.Entities.Auth.Token;
+using FinitiGlossary.Domain.Interfaces.Repositories.Token;
 using FinitiGlossary.Infrastructure.DAL;
 using Microsoft.EntityFrameworkCore;
 

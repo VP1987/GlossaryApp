@@ -1,4 +1,5 @@
 ﻿using FinitiGlossary.Domain.Entities.Auth.Token;
+using FinitiGlossary.Domain.Entities.Terms;
 using FinitiGlossary.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,11 +12,12 @@ namespace FinitiGlossary.Infrastructure.DAL
 
         public DbSet<User> Users => Set<User>();
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+        public DbSet<GlossaryTerm> GlossaryTerms => Set<GlossaryTerm>();
+        public DbSet<ArchivedGlossaryTerm> ArchivedGlossaryTerms => Set<ArchivedGlossaryTerm>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
 
             modelBuilder.Entity<User>(entity =>
             {
@@ -40,8 +42,28 @@ namespace FinitiGlossary.Infrastructure.DAL
                       .OnDelete(DeleteBehavior.Cascade);
             });
 
+            modelBuilder.Entity<GlossaryTerm>(entity =>
+            {
+                entity.ToTable("tblGlossaryTerms");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.Term).IsRequired().HasMaxLength(200);
+                entity.Property(x => x.Definition).IsRequired().HasMaxLength(4000);
+                entity.Property(x => x.Status).HasConversion<int>();
+            });
 
+            modelBuilder.Entity<ArchivedGlossaryTerm>(entity =>
+            {
+                entity.ToTable("tblArchivedGlossaryTerms");
+                entity.HasKey(x => x.Id);
 
+                entity.Property(x => x.OriginalTermId).IsRequired();
+                entity.Property(x => x.Term).IsRequired().HasMaxLength(200);
+                entity.Property(x => x.Definition).IsRequired().HasMaxLength(4000);
+                entity.Property(x => x.ArchivedAt).IsRequired();
+                entity.Property(x => x.ArchivedById).IsRequired().HasMaxLength(255);
+                entity.Property(x => x.CreatedById).IsRequired().HasMaxLength(255);
+                entity.Property(x => x.ChangeSummary).HasMaxLength(1000);
+            });
         }
     }
 }

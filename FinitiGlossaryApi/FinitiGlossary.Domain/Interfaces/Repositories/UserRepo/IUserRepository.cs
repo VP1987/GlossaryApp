@@ -1,5 +1,5 @@
 ﻿using FinitiGlossary.Domain.Entities.Users;
-namespace FinitiGlossary.Application.Interfaces.Repositories.UserIRepo
+namespace FinitiGlossary.Domain.Interfaces.Repositories.UserIRepo
 {
     public interface IUserRepository
     {

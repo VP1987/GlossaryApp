@@ -9,7 +9,6 @@ namespace FinitiGlossary.Domain.Entities.Auth.Token
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime ExpiresAt { get; set; }
         public bool IsRevoked { get; set; } = false;
-
         public int UserId { get; set; }
         public User? User { get; set; }
     }

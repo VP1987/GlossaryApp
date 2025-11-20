@@ -1,4 +1,4 @@
-﻿namespace FinitiGlossary.Domain.Entities.Auth.Requests
+﻿namespace FinitiGlossary.Application.DTOs.Request
 {
     public record LoginRequest(string Email, string Password);
 
