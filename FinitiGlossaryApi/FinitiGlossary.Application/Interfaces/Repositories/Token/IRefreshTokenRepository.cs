@@ -1,4 +1,4 @@
-﻿using FinitiGlossary.Domain.Entities.Token;
+﻿using FinitiGlossary.Domain.Entities.Auth.Token;
 
 namespace FinitiGlossary.Application.Interfaces.Repositories.Token
 {

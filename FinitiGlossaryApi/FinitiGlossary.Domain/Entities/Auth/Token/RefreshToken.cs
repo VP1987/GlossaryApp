@@ -1,6 +1,6 @@
 ﻿using FinitiGlossary.Domain.Entities.Users;
 
-namespace FinitiGlossary.Domain.Entities.Token
+namespace FinitiGlossary.Domain.Entities.Auth.Token
 {
     public class RefreshToken
     {

@@ -1,4 +1,4 @@
-﻿using FinitiGlossary.Domain.Entities.Token;
+﻿using FinitiGlossary.Domain.Entities.Auth.Token;
 using FinitiGlossary.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
 
